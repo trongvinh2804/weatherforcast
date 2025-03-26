@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_Item"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_weather"
+                android:background="@drawable/clear"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/txt_NhietDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/nhietdo"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/txt_TocDoGio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/tocdogio"
+                    android:paddingStart="5dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_TamNhin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/tamnhin"
+                    android:paddingStart="5dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:id="@+id/txt_ThoiGian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/thoigian"
+                    android:paddingStart="5dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_KQNhietDo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/kqNhietDo"
+                    android:gravity="center_vertical"
+                    android:background="@color/yello"
+                    android:layout_margin="5dp"
+                    android:paddingStart="10dp"
+                    tools:ignore="NestedWeights" />
+
+                <TextView
+                    android:id="@+id/txt_KQTocDoGio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/kqTocDoGio"
+                    android:gravity="center_vertical"
+                    android:background="@color/yello"
+                    android:layout_margin="5dp"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_KQTamNhin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/kqTamNhin"
+                    android:gravity="center_vertical"
+                    android:background="@color/yello"
+                    android:layout_margin="5dp"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/txt_KQThoiGian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/kqThoiGian"
+                    android:gravity="center_vertical"
+                    android:background="@color/yello"
+                    android:layout_margin="5dp"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
