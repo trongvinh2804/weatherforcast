@@ -26,17 +26,18 @@ class MyListViewAdapter (val context: Activity, val arrKetQua:List<Weather>) : A
         }
         val ketQua = arrKetQua.get(position)
 
-        if(ketQua.thoiTiet == CLEAR){
+        if(ketQua.weathers.get(0).thoiTiet == CLEAR){
             binding.imgWeather.setImageResource(R.drawable.clear)
         }
-        else if(ketQua.thoiTiet == RAIN){
+        else if(ketQua.weathers.get(0).thoiTiet == RAIN){
             binding.imgWeather.setImageResource(R.drawable.rain)
         }
         else{
             binding.imgWeather.setImageResource(R.drawable.clounds)
         }
-        binding.txtKQNhietDo.text = ketQua.nhietDo.toString()
-        binding.txtKQTocDoGio.text = ketQua.tocDoGio.toString()
+
+        binding.txtKQNhietDo.setText("Lon nhat: ${String.format("%.0f",ketQua.main.nhietDoLonNhat - 275.15f + 0.5)} do c hien tai ${String.format("%.0f",ketQua.main.nhietDo - 275.15f +0.5)} nhiet do hhien tai ${String.format("%.0f",ketQua.main.nhietDoNhoNhat - 275.15f + 0.5f)}")
+        binding.txtKQTocDoGio.text = ketQua.wind.tocDoGio.toString()
         binding.txtKQTamNhin.text = ketQua.tamNhinXa.toString()
         binding.txtKQThoiGian.text = ketQua.thoiGian
 
